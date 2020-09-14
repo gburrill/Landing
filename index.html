@@ -4,34 +4,114 @@
 <head>
   <meta charset="UTF-8">
   <title>Zapier Contact Form</title>
+ <!-- <link rel="stylesheet" href="index.css"> -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div class="container">
   <form id="myForm">
-      First Name:
-    <input type="text" name="first-name" placeholder="First Name"/>
-    <br />
-    Last Name:
-    <input type="text" name="last-name" placeholder="Last Name"/>
-    <br />
-    Email Address:
-    <input type="email" name="email-address" placeholder="Email Address"/>
-    <br />
-    Phone Number:
-    <input type="text" name="phone-number" placeholder="Phone Number"/>
-    <br />
+      
+      <br />
+      <br />
+      
+      <div class="form-group">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
+              <label class="form-check-label" for="gridCheck">
+                  I earn more than £100,000 per annum
+              </label>
+           </div>
+      </div>
+         
+         <div class="form-group">
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria2" value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
+             <label class="form-check-label" for="gridCheck">
+               I have more than £250,000 of investable assets (excluding your home and pension funds)
+             </label>
+           </div>
+         </div>
+         
+         <div class="form-group">
+             <div class="form-check">
+                 <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria3" value="Have had previous experience of similar investments or alternative investments">
+                 <label class="form-check-label" for="gridCheck">
+                     I have had previous experience of similar investments or alternative investments
+                 </label>
+              </div>
+         </div>
+            
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria4" value="Have made more than one investment in an unlisted company in the two years prior to the date">
+                <label class="form-check-label" for="gridCheck">
+                  I have made more than one investment in an unlisted company in the two years prior to the date
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria5" value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
+                    <label class="form-check-label" for="gridCheck">
+                        I have been a director of a company with an annual turnover of at least £1 million in the last two years
+                    </label>
+                 </div>
+            </div>
+               
+               <div class="form-group">
+                 <div class="form-check">
+                   <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria6" value="Have worked in a professional capacity in the private equity sector">
+                   <label class="form-check-label" for="gridCheck">
+                     I have worked in a professional capacity in the private equity sector
+                   </label>
+                 </div>
+               </div>
+               
+               <div class="form-group">
+                 <div class="form-check">
+                   <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria7" value="Have worked in the provision of finance for small and medium enterprises in the last two years">
+                   <label class="form-check-label" for="gridCheck">
+                     I have worked in the provision of finance for small and medium enterprises in the last two years
+                   </label>
+                 </div>
+               </div>
+      
+      <div class="form-row">
+        <div class="col">
+            <!-- <label for="first-name">First Name:</label>  -->
+            
+            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" name="last-name" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+      
+    <div class="form-row">
+        <div class="col">
+            <br />
+            <input type="email" name="email-address" class="form-control" placeholder="Email Address"/>
+            <br />
+        </div>
+    </div>
     
-    <input type="checkbox" name="criteria1" value="It's over 100k"/>
+    <div class="form-row">
+           <div class="col">
+                <input type="text" name="phone-number" class="form-control" placeholder="Phone Number"/>
+                <br />
+           </div>
+    </div>
+    
+    <!--<input type="checkbox" name="criteria1" value="It's over 100k"/>
     I earn over 100k
-    <br />
-    
-    <input type="checkbox" name="criteria2" value="Assets over 250k" />
-    Over 250k assets
+    <br />-->
     
     <br />
-    <input type="submit" value="Submit" id="Form-submit"/>
+    <input type="submit" value="Submit" class="btn btn-primary" id="Form-submit"/>
   </form>
-
+</div>
   <!-- Load jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
