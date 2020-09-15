@@ -22,7 +22,7 @@
       
       <div class="form-group">
           <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
+              <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
               <label class="form-check-label" for="gridCheck">
                   Earn more than £100,000 per annum
               </label>
@@ -31,7 +31,7 @@
          
          <div class="form-group">
            <div class="form-check">
-             <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria2" value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
+             <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria2" value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
              <label class="form-check-label" for="gridCheck">
                Have more than £250,000 of investable assets (excluding your home and pension funds)
              </label>
@@ -40,7 +40,7 @@
          
          <div class="form-group">
              <div class="form-check">
-                 <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria3" value="Have had previous experience of similar investments or alternative investments">
+                 <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria3" value="Have had previous experience of similar investments or alternative investments">
                  <label class="form-check-label" for="gridCheck">
                      Have had previous experience of similar investments or alternative investments
                  </label>
@@ -49,7 +49,7 @@
             
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria4" value="Have made more than one investment in an unlisted company in the two years prior to the date">
+                <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria4" value="Have made more than one investment in an unlisted company in the two years prior to the date">
                 <label class="form-check-label" for="gridCheck">
                   Have made more than one investment in an unlisted company in the two years prior to the date
                 </label>
@@ -58,7 +58,7 @@
             
             <div class="form-group">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria5" value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
+                    <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria5" value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
                     <label class="form-check-label" for="gridCheck">
                         Have been a director of a company with an annual turnover of at least £1 million in the last two years
                     </label>
@@ -67,7 +67,7 @@
                
                <div class="form-group">
                  <div class="form-check">
-                   <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria6" value="Have worked in a professional capacity in the private equity sector">
+                   <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria6" value="Have worked in a professional capacity in the private equity sector">
                    <label class="form-check-label" for="gridCheck">
                      Have worked in a professional capacity in the private equity sector
                    </label>
@@ -76,7 +76,7 @@
                
                <div class="form-group">
                  <div class="form-check">
-                   <input class="form-check-input" type="checkbox" id="gridCheck" name="criteria7" value="Have worked in the provision of finance for small and medium enterprises in the last two years">
+                   <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria7" value="Have worked in the provision of finance for small and medium enterprises in the last two years">
                    <label class="form-check-label" for="gridCheck">
                      Have worked in the provision of finance for small and medium enterprises in the last two years
                    </label>
@@ -135,17 +135,43 @@
 
 <script>
     $("#testr").hide();
+    
 // POST form data to zapier on submit
 $('#myForm').submit(function(e){
   e.preventDefault();
   
+  // write here method to concat (stick together) criteria into 1 object to pass
+  
+  // new js array
+  var a = [];
+  var n = $( "#criteria1:checked" ).val();
+  
+  if(document.getElementById('criteria1').checked) {
+      a.push($( "#criteria1:checked" ).val());
+  } if(document.getElementById('criteria2').checked) {
+      a.push($( "#criteria2:checked" ).val());
+  } if(document.getElementById('criteria3').checked) {
+      a.push($( "#criteria3:checked" ).val());
+  } if(document.getElementById('criteria4').checked) {
+      a.push($( "#criteria4:checked" ).val());
+  } if(document.getElementById('criteria5').checked) {
+      a.push($( "#criteria5:checked" ).val());
+  } if(document.getElementById('criteria6').checked) {
+      a.push($( "#criteria6:checked" ).val());
+  } if(document.getElementById('criteria7').checked) {
+      a.push($( "#criteria7:checked" ).val());
+  }
+  
+  console.log(a);
+  
   $.ajax({
       url:'https://hooks.zapier.com/hooks/catch/8488209/owo50wn/',
       type:'post',
-      data:$('#myForm').serialize(),
+      data: { foo : $('#myForm').serialize(), bar : a  } ,
       success:function(){
         // Change URL to page you would like to send the user after form is submitted
         //window.location = "http://google.com";
+        console.log($('#myForm').serialize());
         $("#testr").show();
         $("#main").hide();
       }
