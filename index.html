@@ -95,21 +95,21 @@
         </div>
         <div class="col">
             <br />
-          <input type="text" name="last-name" class="form-control" placeholder="Last name">
+          <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Last name">
         </div>
       </div>
       
     <div class="form-row">
         <div class="col">
             <br />
-            <input type="email" name="email-address" class="form-control" placeholder="Email Address"/>
+            <input type="email" id="email" name="email-address" class="form-control" placeholder="Email Address"/>
             <br />
         </div>
     </div>
     
     <div class="form-row">
            <div class="col">
-                <input type="text" name="phone-number" class="form-control" placeholder="Phone Number"/>
+                <input type="text" id="phone" name="phone-number" class="form-control" placeholder="Phone Number"/>
                 <br />
            </div>
     </div>
@@ -144,7 +144,7 @@ $('#myForm').submit(function(e){
   
   // new js array
   var a = [];
-  var n = $( "#criteria1:checked" ).val();
+  //var n = $( "#criteria1:checked" ).val();
   
   if(document.getElementById('criteria1').checked) {
       a.push($( "#criteria1:checked" ).val());
@@ -162,16 +162,20 @@ $('#myForm').submit(function(e){
       a.push($( "#criteria7:checked" ).val());
   }
   
-  console.log(a);
+  //console.log(a);
+  
+  var b = [];
+  b.push($( "#first-name" ).val());
   
   $.ajax({
       url:'https://hooks.zapier.com/hooks/catch/8488209/owo50wn/',
       type:'post',
-      data: { foo : $('#myForm').serialize(), bar : a  } ,
+      //data: $('#myForm').serialize(),
+      data: { firstName : b[0], lastName : $( "#last-name" ).val(), email : $("#email").val(), phone : $("#phone").val(), criteria : a },
       success:function(){
         // Change URL to page you would like to send the user after form is submitted
         //window.location = "http://google.com";
-        console.log($('#myForm').serialize());
+        //console.log($('#myForm').serialize());
         $("#testr").show();
         $("#main").hide();
       }
