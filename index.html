@@ -169,8 +169,7 @@
 // POST form data to zapier on submit
 $('#myForm').submit(function(e){
   e.preventDefault();
-  
-  // write here method to concat (stick together) criteria into 1 object to pass
+  fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
   
   // new js array
   var a = [];
