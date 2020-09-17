@@ -1,65 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>AW Consulting</title>
- <!-- <link rel="stylesheet" href="index.css"> -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-          
-          
-          
-          <!-- Facebook Pixel Code -->
-          <script>
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window,document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-           fbq('init', '323748085630470');
-          fbq('track', 'PageView');
-          </script>
-          <noscript>
-           <img height="1" width="1"
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Facebook Pixel Code -->
+  <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      f(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '323748085630470');
+      fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1"
           src="https://www.facebook.com/tr?id=323748085630470&ev=PageView
           &noscript=1"/>
-          </noscript>
-          <!-- End Facebook Pixel Code -->
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body>
     <div class="container">
-    <img src="https://static.wixstatic.com/media/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.jpg/v1/crop/x_577,y_20,w_1439,h_473/fill/w_642,h_200,al_c,q_80,usm_0.66_1.00_0.01/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.webp" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-        
-    </img>
+        <img src="https://static.wixstatic.com/media/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.jpg/v1/crop/x_577,y_20,w_1439,h_473/fill/w_642,h_200,al_c,q_80,usm_0.66_1.00_0.01/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.webp"
+        class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+        </img>
     </div>
-<div id="main" class="container">
-  <form id="myForm">
-      This opportunity is only available to you if you either:
-      <br />
-      <br />
-      
-      <div class="form-group">
-          <div class="form-check">
-              <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
-              <label class="form-check-label" for="gridCheck">
-                  Earn more than £100,000 per annum
-              </label>
-           </div>
-      </div>
-         
-         <div class="form-group">
-           <div class="form-check">
-             <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria2" value=" Have more than £250,000 of investable assets (excluding your home and pension funds)">
-             <label class="form-check-label" for="gridCheck">
-               Have more than £250,000 of investable assets (excluding your home and pension funds)
-             </label>
-           </div>
-         </div>
-         
+    <div id="main" class="container">
+      <form id="myForm" method="POST" data-netlify="true">
+          This opportunity is only available to you if you either:
+          <br />
+          <br />
+
+          <div class="form-group">
+              <div class="form-check">
+                  <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
+                  <label class="form-check-label" for="gridCheck">Earn more than £100,000 per annum</label>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <div class="form-check">
+                  <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria2" value=" Have more than £250,000 of investable assets (excluding your home and pension funds)">
+                   <label class="form-check-label" for="gridCheck">
+                     Have more than £250,000 of investable assets (excluding your home and pension funds)
+                   </label>
+                 </div>
+          </div>
+
          <div class="form-group">
              <div class="form-check">
                  <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria3" value=" Have had previous experience of similar investments or alternative investments">
@@ -68,7 +62,7 @@
                  </label>
               </div>
          </div>
-            
+
             <div class="form-group">
               <div class="form-check">
                 <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria4" value=" Have made more than one investment in an unlisted company in the two years prior to the date">
@@ -77,7 +71,7 @@
                 </label>
               </div>
             </div>
-            
+
             <div class="form-group">
                 <div class="form-check">
                     <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria5" value=" Been a director of a company with an annual turnover of at least £1 million in the last two years">
@@ -86,7 +80,7 @@
                     </label>
                  </div>
             </div>
-               
+
                <div class="form-group">
                  <div class="form-check">
                    <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria6" value=" Have worked in a professional capacity in the private equity sector">
@@ -95,7 +89,7 @@
                    </label>
                  </div>
                </div>
-               
+
                <div class="form-group">
                  <div class="form-check">
                    <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria7" value=" Have worked in the provision of finance for small and medium enterprises in the last two years">
@@ -104,44 +98,38 @@
                    </label>
                  </div>
                </div>
-               
+
                Please specify which of the above applies to you, and then kindly complete the following information
-               
-             
-      
-      <div class="form-row">
-        <div class="col">
-            <!-- <label for="first-name">First Name:</label>  -->
-            <br />
-            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-            <br />
-          <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Last name">
-        </div>
-      </div>
-      
-    <div class="form-row">
-        <div class="col">
-            <br />
-            <input type="email" id="email" name="email-address" class="form-control" placeholder="Email Address"/>
-            <br />
-        </div>
-    </div>
-    
-    <div class="form-row">
-           <div class="col">
-                <input type="text" id="phone" name="phone-number" class="form-control" placeholder="Phone Number"/>
+
+          <div class="form-row">
+            <div class="col">
+                <!-- <label for="first-name">First Name:</label>  -->
                 <br />
-           </div>
-    </div>
-    
-    <!--<input type="checkbox" name="criteria1" value="It's over 100k"/>
-    I earn over 100k
-    <br />-->
-    
-    <br />
-    <input type="submit" value="Submit" class="btn btn-primary" id="Form-submit"/>
+                <input type="text" id="first-name" name="first-name" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+                <br />
+              <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+
+          <div class="form-row">
+              <div class="col">
+                  <br />
+                  <input type="email" id="email" name="email-address" class="form-control" placeholder="Email Address"/>
+                  <br />
+              </div>
+          </div>
+
+          <div class="form-row">
+                 <div class="col">
+                      <input type="text" id="phone" name="phone-number" class="form-control" placeholder="Phone Number"/>
+                      <br />
+                 </div>
+          </div>
+
+          <br />
+          <input type="submit" value="Submit" class="btn btn-primary" id="Form-submit"/>
   </form>
 </div>
 
@@ -149,7 +137,7 @@
 <div id="testr" class="container" style="hidden">
     <br />
     <p class="text-center"><span class="text-center">Thank you for your enquiry. One of our senior consultants will contact you imminently. </span> <br /> <br />
-    
+
    <span class="fixed-bottom container"> © Alfred William Consultancy Limited. All Rights Reserved. Alfred William Consultancy Limited are not authorised and regulated by the Financial Conduct Authority (FCA) and clients who invest will not have access to the Financial Ombudsman Service (FOS) and the Financial Services Compensation Scheme (FSCS).
 
      <br /> <br />
@@ -165,16 +153,13 @@
 
 <script>
     $("#testr").hide();
-    
+
 // POST form data to zapier on submit
 $('#myForm').submit(function(e){
   e.preventDefault();
   fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
-  
-  // new js array
   var a = [];
-  //var n = $( "#criteria1:checked" ).val();
-  
+
   if(document.getElementById('criteria1').checked) {
       a.push($( "#criteria1:checked" ).val());
   } if(document.getElementById('criteria2').checked) {
@@ -190,21 +175,17 @@ $('#myForm').submit(function(e){
   } if(document.getElementById('criteria7').checked) {
       a.push($( "#criteria7:checked" ).val());
   }
-  
+
   console.log(a);
-  
+
   var b = [];
   b.push($( "#first-name" ).val());
-  
+
   $.ajax({
       url:'https://hooks.zapier.com/hooks/catch/8488209/owo50wn/',
       type:'post',
-      //data: $('#myForm').serialize(),
       data: { firstName : b[0], lastName : $( "#last-name" ).val(), email : $("#email").val(), phone : $("#phone").val(), criteria : a },
       success:function(){
-        // Change URL to page you would like to send the user after form is submitted
-        //window.location = "http://google.com";
-        //console.log($('#myForm').serialize());
         $("#testr").show();
         $("#main").hide();
       }
