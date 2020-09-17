@@ -11,13 +11,13 @@
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      f(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
       n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window,document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '323748085630470');
-      fbq('track', 'PageView');
+      //fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1"
@@ -33,7 +33,7 @@
         </img>
     </div>
     <div id="main" class="container">
-      <form id="myForm">
+      <form id="myForm" method="POST" data-netlify="true">
           This opportunity is only available to you if you either:
           <br />
           <br />
@@ -157,7 +157,8 @@
 // POST form data to zapier on submit
 $('#myForm').submit(function(e){
   e.preventDefault();
-  fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
+  console.log('testa');
+  //fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
   var a = [];
 
   if(document.getElementById('criteria1').checked) {
