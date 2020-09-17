@@ -17,7 +17,7 @@
       s.parentNode.insertBefore(t,s)}(window,document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '323748085630470');
-      //fbq('track', 'PageView');
+      fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1"
@@ -37,9 +37,6 @@
           This opportunity is only available to you if you either:
           <br />
           <br />
-          <p>
-           <label>Your Test: <input type="text" name="test" /></label>
-         </p>
           <div class="form-group">
               <div class="form-check">
                   <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
@@ -160,7 +157,7 @@
 $('#myForm').submit(function(e){
   e.preventDefault();
   console.log('testa');
-  //fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
+  fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
   var a = [];
 
   if(document.getElementById('criteria1').checked) {
