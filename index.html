@@ -17,7 +17,7 @@
       s.parentNode.insertBefore(t,s)}(window,document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '323748085630470');
-      //fbq('track', 'PageView');
+      fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1"
@@ -158,7 +158,7 @@
 $('#myForm').submit(function(e){
   e.preventDefault();
   console.log('testa');
-  //fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
+  fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
   var a = [];
 
   if(document.getElementById('criteria1').checked) {
