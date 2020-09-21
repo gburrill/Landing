@@ -187,9 +187,9 @@
       $("#congratulations-message").show();
       $("#personal-details").show();
       // track fb custom event for each checkbox
-      $('input[type=checkbox]:checked').each(function(e){
+      $('input[type=checkbox]:checked').each(function(){
         //code here
-        alert(e.target.id);
+        //alert(e.target.id);
         $(this).attr("id");
         //fbq('track', );
       });
