@@ -188,10 +188,8 @@
       $("#personal-details").show();
       // track fb custom event for each checkbox
       $('input[type=checkbox]:checked').each(function(){
-        //code here
-        //alert(e.target.id);
+
         console.log($(this).attr("id"));
-        alert($(this).attr("id"));
         
         //fbq('track', );
       });
