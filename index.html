@@ -187,13 +187,15 @@
       $("#congratulations-message").show();
       $("#personal-details").show();
       // track fb custom event for each checkbox
+      var criteriaChecked = [];
       $('input[type=checkbox]:checked').each(function(){
-
-        console.log($(this).attr("id"));
-        
-        //fbq('track', );
+        //console.log($(this).attr("id"));
+        criteriaChecked.push($(this).attr("id"));
       });
-
+      consoloe.log(criteriaChecked);
+      var joinCriteriaChecked = criteriaChecked.join();
+      console.log(joinCriteriaChecked);
+      fbq('track', joinCriteriaChecked);
     });
 
     // replace testForm with new form name(s)
