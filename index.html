@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>AW Consulting Dev</title>
+  <title>AW Consulting</title>
   <!-- Load Bootsrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -11,7 +11,7 @@
   <!-- Load jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Facebook Pixel Code -->
-  <!-- <script>
+  <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -27,7 +27,7 @@
     <img height="1" width="1"
           src="https://www.facebook.com/tr?id=323748085630470&ev=PageView
           &noscript=1"/>
-  </noscript> -->
+  </noscript>
   <!-- End Facebook Pixel Code -->
 </head>
 
@@ -42,9 +42,6 @@
     <div class="alert alert-success" role="alert">
       Congratulations, you've qualified. Kindly complete the following information to receive a free brochure
     </div>
-    <!-- <br />
-    <br />
-    <button id="congratulations-button" type="button" class="btn btn-primary">Submit</button> -->
   </div>
   <div id="main" class="container">
     <form id="testForm" method="POST" data-netlify="true" netlify>
@@ -194,7 +191,7 @@
     // replace testForm with new form name(s)
     $('#testForm').submit(function (e) {
       e.preventDefault();
-      //fbq('track', 'Lead'); // track facebook lead event
+      fbq('track', 'Lead'); // track facebook lead event
       var $form = $(this);
       $.post($form.attr("action"), $form.serialize()).then(function () {
         $("#thank-message").show();
