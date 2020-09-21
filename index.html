@@ -186,6 +186,14 @@
       $("#tickboxes").hide();
       $("#congratulations-message").show();
       $("#personal-details").show();
+      // track fb custom event for each checkbox
+      $('input[type=checkbox]:checked').each(function(e){
+        //code here
+        alert(e.target.id);
+        $(this).attr("id");
+        //fbq('track', );
+      });
+
     });
 
     // replace testForm with new form name(s)
