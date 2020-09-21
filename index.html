@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>AW Consulting</title>
-  <!-- <link rel="stylesheet" href="index.css"> -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>AW Consulting Dev</title>
+  <!-- Load Bootsrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Load jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Facebook Pixel Code -->
-  <script>
+  <!-- <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -23,175 +27,184 @@
     <img height="1" width="1"
           src="https://www.facebook.com/tr?id=323748085630470&ev=PageView
           &noscript=1"/>
-  </noscript>
+  </noscript> -->
   <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
-    <div class="container">
-        <img src="https://static.wixstatic.com/media/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.jpg/v1/crop/x_577,y_20,w_1439,h_473/fill/w_642,h_200,al_c,q_80,usm_0.66_1.00_0.01/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.webp"
-        class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-        </img>
+  <div class="container">
+    <img
+      src="https://static.wixstatic.com/media/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.jpg/v1/crop/x_577,y_20,w_1439,h_473/fill/w_642,h_200,al_c,q_80,usm_0.66_1.00_0.01/b2aa93_9f684f9b2fec4f909e4c25ed9e6fee2f~mv2.webp"
+      class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+    </img>
+  </div>
+  <div id="congratulations-message" class="container">   
+    <div class="alert alert-success" role="alert">
+      Congratulations, you've qualified. Kindly complete the following information to receive a free brochure
     </div>
-    <div id="main" class="container">
-      <form id="myForm" method="POST" data-netlify="true" netlify>
-          This opportunity is only available to you if you either:
-          <br />
-          <br />
-          <div class="form-group">
-              <div class="form-check">
-                  <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria1" value="Earn more than £100,000 per annum">
-                  <label class="form-check-label" for="gridCheck">Earn more than £100,000 per annum</label>
-              </div>
-          </div>
-
-          <div class="form-group">
-              <div class="form-check">
-                  <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria2" value=" Have more than £250,000 of investable assets (excluding your home and pension funds)">
-                   <label class="form-check-label" for="gridCheck">
-                     Have more than £250,000 of investable assets (excluding your home and pension funds)
-                   </label>
-                 </div>
-          </div>
-
-         <div class="form-group">
-             <div class="form-check">
-                 <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria3" value=" Have had previous experience of similar investments or alternative investments">
-                 <label class="form-check-label" for="gridCheck">
-                     Have had previous experience of similar investments or alternative investments
-                 </label>
-              </div>
-         </div>
-
-            <div class="form-group">
-              <div class="form-check">
-                <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria4" value=" Have made more than one investment in an unlisted company in the two years prior to the date">
-                <label class="form-check-label" for="gridCheck">
-                  Have made more than one investment in an unlisted company in the two years prior to the date
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group">
-                <div class="form-check">
-                    <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria5" value=" Been a director of a company with an annual turnover of at least £1 million in the last two years">
-                    <label class="form-check-label" for="gridCheck">
-                        Have been a director of a company with an annual turnover of at least £1 million in the last two years
-                    </label>
-                 </div>
-            </div>
-
-               <div class="form-group">
-                 <div class="form-check">
-                   <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria6" value=" Have worked in a professional capacity in the private equity sector">
-                   <label class="form-check-label" for="gridCheck">
-                     Have worked in a professional capacity in the private equity sector
-                   </label>
-                 </div>
-               </div>
-
-               <div class="form-group">
-                 <div class="form-check">
-                   <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria7" value=" Have worked in the provision of finance for small and medium enterprises in the last two years">
-                   <label class="form-check-label" for="gridCheck">
-                     Have worked in the provision of finance for small and medium enterprises in the last two years
-                   </label>
-                 </div>
-               </div>
-
-               Please specify which of the above applies to you, and then kindly complete the following information
-
-          <div class="form-row">
-            <div class="col">
-                <!-- <label for="first-name">First Name:</label>  -->
-                <br />
-                <input type="text" id="first-name" name="first-name" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <br />
-              <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Last name">
-            </div>
-          </div>
-
-          <div class="form-row">
-              <div class="col">
-                  <br />
-                  <input type="email" id="email" name="email-address" class="form-control" placeholder="Email Address"/>
-                  <br />
-              </div>
-          </div>
-
-          <div class="form-row">
-                 <div class="col">
-                      <input type="text" id="phone" name="phone-number" class="form-control" placeholder="Phone Number"/>
-                      <br />
-                 </div>
-          </div>
-
-          <br />
-          <input type="submit" value="Submit" class="btn btn-primary" id="Form-submit"/>
-  </form>
-</div>
-
-
-<div id="testr" class="container" style="hidden">
+    <!-- <br />
     <br />
-    <p class="text-center"><span class="text-center">Thank you for your enquiry. One of our senior consultants will contact you imminently. </span> <br /> <br />
+    <button id="congratulations-button" type="button" class="btn btn-primary">Submit</button> -->
+  </div>
+  <div id="main" class="container">
+    <form id="testForm" method="POST" data-netlify="true" netlify>
+      <div id="tickboxes">
+        This opportunity is only available to you if you either:
+        <br />
+        <br />
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Earn more than £100,000 per annum">
+            <label class="form-check-label">Earn more than £100,000 per annum</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
+            <label class="form-check-label">
+              Have more than £250,000 of investable assets (excluding your home and pension funds)
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Have had previous experience of similar investments or alternative investments">
+            <label class="form-check-label">
+              Have had previous experience of similar investments or alternative investments
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Have made more than one investment in an unlisted company in the two years prior to the date">
+            <label class="form-check-label">
+              Have made more than one investment in an unlisted company in the two years prior to the date
+            </label>
+          </div>
+        </div>
 
-   <span class="fixed-bottom container"> © Alfred William Consultancy Limited. All Rights Reserved. Alfred William Consultancy Limited are not authorised and regulated by the Financial Conduct Authority (FCA) and clients who invest will not have access to the Financial Ombudsman Service (FOS) and the Financial Services Compensation Scheme (FSCS).
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
+            <label class="form-check-label">
+              Have been a director of a company with an annual turnover of at least £1 million in the last two years
+            </label>
+          </div>
+        </div>
 
-     <br /> <br />
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Have worked in a professional capacity in the private equity sector">
+            <label class="form-check-label">
+              Have worked in a professional capacity in the private equity sector
+            </label>
+          </div>
+        </div>
 
-    The content of this email, is for information only and does not constitute, nor must be deemed to be financial advice. Alfred William Consultancy Limited is registered in England & Wales with Company Number 11351745. Registered Office: Docklands Business Centre, 10-16 Tiller Road, Canary Wharf, London, E14 8PX. By submitting, you agree to our Privacy Policy.
-   <br /> <br />
-   </span></p>
-</div>
+        <div class="form-group">
+          <div class="form-check">
+            <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              value="Have worked in the provision of finance for small and medium enterprises in the last two years">
+            <label class="form-check-label">
+              Have worked in the provision of finance for small and medium enterprises in the last two years
+            </label>
+          </div>
+        </div>
+
+        Please specify which of the above applies to you and then click submit
+        <br />
+        <br />
+        <button id="criteria-button" type="button" class="btn btn-primary">Submit</button>
+
+      </div>
+      <div id="personal-details">
+        <div class="form-row">
+          <div class="col">
+            <br />
+            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <br />
+            <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <br />
+            <input type="email" id="email" name="email-address" class="form-control" placeholder="Email Address" />
+            <br />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <input type="text" id="phone" name="phone-number" class="form-control" placeholder="Phone Number" />
+            <br />
+          </div>
+        </div>
+
+        <br />
+        <input type="submit" value="Submit" class="btn btn-primary" id="Form-submit" />
+      </div>
+    </form>
+  </div>
 
 
-  <!-- Load jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<script>
-    $("#testr").hide();
 
-// POST form data to zapier on submit
-$('#myForm').submit(function(e){
-  e.preventDefault();
-  console.log('testa');
-  fbq('track', 'Lead');  // write here method to concat (stick together) criteria into 1 object to pass
-  var a = [];
+  <div id="thank-message" class="container">
+    <br />
+    <p class="text-center"><span class="text-center">Thank you for your enquiry. One of our senior consultants will
+        contact you imminently. </span> <br /> <br />
 
-  if(document.getElementById('criteria1').checked) {
-      a.push($( "#criteria1:checked" ).val());
-  } if(document.getElementById('criteria2').checked) {
-      a.push($( "#criteria2:checked" ).val());
-  } if(document.getElementById('criteria3').checked) {
-      a.push($( "#criteria3:checked" ).val());
-  } if(document.getElementById('criteria4').checked) {
-      a.push($( "#criteria4:checked" ).val());
-  } if(document.getElementById('criteria5').checked) {
-      a.push($( "#criteria5:checked" ).val());
-  } if(document.getElementById('criteria6').checked) {
-      a.push($( "#criteria6:checked" ).val());
-  } if(document.getElementById('criteria7').checked) {
-      a.push($( "#criteria7:checked" ).val());
-  }
+      <span class="fixed-bottom container"> © Alfred William Consultancy Limited. All Rights Reserved. Alfred William
+        Consultancy Limited are not authorised and regulated by the Financial Conduct Authority (FCA) and clients who
+        invest will not have access to the Financial Ombudsman Service (FOS) and the Financial Services Compensation
+        Scheme (FSCS).
 
-  console.log(a);
+        <br /> <br />
 
-  var b = [];
-  b.push($( "#first-name" ).val());
+        The content of this email, is for information only and does not constitute, nor must be deemed to be financial
+        advice. Alfred William Consultancy Limited is registered in England & Wales with Company Number 11351745.
+        Registered Office: Docklands Business Centre, 10-16 Tiller Road, Canary Wharf, London, E14 8PX. By submitting,
+        you agree to our Privacy Policy.
+        <br /> <br />
+      </span></p>
+  </div>
 
-  $.ajax({
-      url:'https://hooks.zapier.com/hooks/catch/8488209/owo50wn/',
-      type:'post',
-      data: { firstName : b[0], lastName : $( "#last-name" ).val(), email : $("#email").val(), phone : $("#phone").val(), criteria : a },
-      success:function(){
-        $("#testr").show();
-        $("#main").hide();
-      }
-  });
-});
-</script>
+  <script>
+    $("#thank-message").hide();
+    $("#personal-details").hide();
+    $("#congratulations-message").hide();
+
+
+    $( "#criteria-button" ).click(function() {
+      $("#tickboxes").hide();
+      $("#congratulations-message").show();
+      $("#personal-details").show();
+    });
+
+    // replace testForm with new form name(s)
+    $('#testForm').submit(function (e) {
+      e.preventDefault();
+      //fbq('track', 'Lead'); // track facebook lead event
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function () {
+        $("#thank-message").show();
+        $("#personal-details").hide();
+        $("#congratulations-message").hide();
+      });
+
+    });
+  </script>
 
 </body>
+
 </html>
