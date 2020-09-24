@@ -44,83 +44,90 @@
     </div>
   </div>
   <div id="main" class="container">
+    <br />
     <form id="testForm" method="POST" data-netlify="true" netlify>
-      <div id="tickboxes">
-        This opportunity is only available to you if you either:
+      <div id="tickboxes" class="jumbotron">
+        <p class="lead">Alfred William Consultancy is a UK only property specialist. We are pleased to offer a complimentary brochure to all HNW (high net worth) investors explaining our exciting “fixed income” opportunity of 15% in 12 months!</p>
+
+        <hr class="my-4">
+
+        <p class="h5">This opportunity is only available to you if you either:</p>
         <br />
+        <div style="margin-left: 20px;">
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Earn more than £100,000 per annum">
+              <label class="form-check-label">Earn more than £100,000 per annum</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
+              <label class="form-check-label">
+                Have more than £250,000 of investable assets (excluding your home and pension funds)
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Have had previous experience of similar investments or alternative investments">
+              <label class="form-check-label">
+                Have had previous experience of similar investments or alternative investments
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Have made more than one investment in an unlisted company in the two years prior to the date">
+              <label class="form-check-label">
+                Have made more than one investment in an unlisted company in the two years prior to the date
+              </label>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
+              <label class="form-check-label">
+                Have been a director of a company with an annual turnover of at least £1 million in the last two years
+              </label>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Have worked in a professional capacity in the private equity sector">
+              <label class="form-check-label">
+                Have worked in a professional capacity in the private equity sector
+              </label>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="Have worked in the provision of finance for small and medium enterprises in the last two years">
+              <label class="form-check-label">
+                Have worked in the provision of finance for small and medium enterprises in the last two years
+              </label>
+            </div>
+          </div>
+        </div>
         <br />
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Earn more than £100,000 per annum">
-            <label class="form-check-label">Earn more than £100,000 per annum</label>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
-            <label class="form-check-label">
-              Have more than £250,000 of investable assets (excluding your home and pension funds)
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Have had previous experience of similar investments or alternative investments">
-            <label class="form-check-label">
-              Have had previous experience of similar investments or alternative investments
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Have made more than one investment in an unlisted company in the two years prior to the date">
-            <label class="form-check-label">
-              Have made more than one investment in an unlisted company in the two years prior to the date
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
-            <label class="form-check-label">
-              Have been a director of a company with an annual turnover of at least £1 million in the last two years
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Have worked in a professional capacity in the private equity sector">
-            <label class="form-check-label">
-              Have worked in a professional capacity in the private equity sector
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="form-check">
-            <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
-              value="Have worked in the provision of finance for small and medium enterprises in the last two years">
-            <label class="form-check-label">
-              Have worked in the provision of finance for small and medium enterprises in the last two years
-            </label>
-          </div>
-        </div>
-
-        Please specify which of the above applies to you and then click submit
-        <br />
+        <p class="h6">Please specify which of the above applies to you and then click submit. Alternatively if the above options do not apply to your personal status, 
+          then Alfred William Consultancy may have other routes that can help with your investment needs. <a id="lnw-link" href="#">Click here to find out more.</a></p> 
         <br />
         <button id="criteria-button" type="button" class="btn btn-primary">Submit</button>
 
       </div>
-      <div id="personal-details">
+      <div id="personal-details" class="jumbotron">
+        <p class="lead">Please fill in the following information:</p>
         <div class="form-row">
           <div class="col">
             <br />
@@ -148,7 +155,10 @@
         </div>
 
         <br />
-        <input type="submit" value="Submit" class="btn btn-primary" id="Form-submit" />
+        <div class="text-center">
+          <input type="submit" value="Get your free brochure here" class="btn btn-primary btn-lg btn-block" id="Form-submit" />
+        </div>
+        
       </div>
     </form>
   </div>
@@ -186,19 +196,26 @@
       $("#tickboxes").hide();
       $("#congratulations-message").show();
       $("#personal-details").show();
-      // track fb custom event for each checkbox
       var criteriaChecked = [];
       $('input[type=checkbox]:checked').each(function(){
-        //console.log($(this).attr("id"));
         criteriaChecked.push($(this).attr("id"));
       });
-      console.log(criteriaChecked);
       var joinCriteriaChecked = criteriaChecked.join();
-      console.log(joinCriteriaChecked);
-      fbq('track', joinCriteriaChecked);
+      fbq('track', joinCriteriaChecked); // track facebook custom event
     });
 
-    // replace testForm with new form name(s)
+    $( "#lnw-link" ).click(function() {
+      $("#tickboxes").hide();
+      $("#personal-details").show();
+      //var criteriaChecked = [];
+      //$('input[type=checkbox]:checked').each(function(){
+      //  criteriaChecked.push($(this).attr("id"));
+      // });
+      //var joinCriteriaChecked = criteriaChecked.join();
+      //fbq('track', joinCriteriaChecked); // track facebook custom event
+    });
+
+
     $('#testForm').submit(function (e) {
       e.preventDefault();
       fbq('track', 'Lead'); // track facebook lead event
