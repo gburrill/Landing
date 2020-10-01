@@ -56,14 +56,14 @@
         <div style="margin-left: 20px;">
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria1" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria1" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Earn more than £100,000 per annum">
               <label class="form-check-label">Earn more than £100,000 per annum</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria2" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria2" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Have more than £250,000 of investable assets (excluding your home and pension funds)">
               <label class="form-check-label">
                 Have more than £250,000 of investable assets (excluding your home and pension funds)
@@ -72,7 +72,7 @@
           </div>
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria3" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria3" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Have had previous experience of similar investments or alternative investments">
               <label class="form-check-label">
                 Have had previous experience of similar investments or alternative investments
@@ -81,7 +81,7 @@
           </div>
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria4" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria4" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Have made more than one investment in an unlisted company in the two years prior to the date">
               <label class="form-check-label">
                 Have made more than one investment in an unlisted company in the two years prior to the date
@@ -91,7 +91,7 @@
   
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria5" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria5" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Been a director of a company with an annual turnover of at least £1 million in the last two years">
               <label class="form-check-label">
                 Have been a director of a company with an annual turnover of at least £1 million in the last two years
@@ -101,7 +101,7 @@
   
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria6" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria6" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Have worked in a professional capacity in the private equity sector">
               <label class="form-check-label">
                 Have worked in a professional capacity in the private equity sector
@@ -111,10 +111,20 @@
   
           <div class="form-group">
             <div class="form-check">
-              <input id="criteria7" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+              <input id="criteria7" class="criteria form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
                 value="Have worked in the provision of finance for small and medium enterprises in the last two years">
               <label class="form-check-label">
                 Have worked in the provision of finance for small and medium enterprises in the last two years
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input id="criteria8" class="form-check-input" type="checkbox" id="gridCheck" name="criteria[]"
+                value="None of the above">
+              <label class="form-check-label">
+                None of the above
               </label>
             </div>
           </div>
@@ -131,25 +141,37 @@
         <div class="form-row">
           <div class="col">
             <br />
-            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="First name">
+            <input type="text" id="first-name" name="first-name" class="details-input form-control" placeholder="First name">
+            <div class="invalid-feedback">
+              Please provide your first name.
+            </div>
           </div>
           <div class="col">
             <br />
-            <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Last name">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
-            <br />
-            <input type="email" id="email" name="email-address" class="form-control" placeholder="Email Address" />
-            <br />
+            <input type="text" id="last-name" name="last-name" class="details-input form-control" placeholder="Last name">
+            <div class="invalid-feedback">
+              Please provide your last name.
+            </div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="col">
-            <input type="text" id="phone" name="phone-number" class="form-control" placeholder="Phone Number" />
+            <br />
+            <input type="email" id="email" name="email-address" class="details-input form-control" placeholder="Email Address" />
+            <div class="invalid-feedback">
+              Please provide your email address.
+            </div>
+            <br />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <input type="text" id="phone" name="phone-number" class="details-input form-control" placeholder="Phone Number" />
+            <div class="invalid-feedback">
+              Please provide your phone number.
+            </div>
             <br />
           </div>
         </div>
@@ -193,39 +215,90 @@
 
 
     $( "#criteria-button" ).click(function() {
-      $("#tickboxes").hide();
-      $("#congratulations-message").show();
-      $("#personal-details").show();
+      // check if at least one tickbox is checked before proceeding
+      // if none are ticked then display a message notifying
       var criteriaChecked = [];
       $('input[type=checkbox]:checked').each(function(){
         criteriaChecked.push($(this).attr("id"));
       });
-      var joinCriteriaChecked = criteriaChecked.join();
+      if(criteriaChecked.length === 0) {
+        alert('you must select at least one tick box to continue');
+      } else {
+        var joinCriteriaChecked = criteriaChecked.join();
+        $("#tickboxes").hide();
+        if(criteriaChecked[0] != "criteria8") {
+          $("#congratulations-message").show();
+        }
+        $("#personal-details").show();
+      }
       fbq('track', joinCriteriaChecked); // track facebook custom event
     });
 
     $( "#lnw-link" ).click(function() {
       $("#tickboxes").hide();
       $("#personal-details").show();
-      //var criteriaChecked = [];
-      //$('input[type=checkbox]:checked').each(function(){
-      //  criteriaChecked.push($(this).attr("id"));
-      // });
-      //var joinCriteriaChecked = criteriaChecked.join();
-      //fbq('track', joinCriteriaChecked); // track facebook custom event
     });
 
+    $('#criteria8').click(function() { // on "none of the above" ticked event jquery
+      if(this.checked) {
+        // set all the other tickboxes to disabled and not checked
+        document.getElementById("criteria1").disabled = true;
+        document.getElementById("criteria1").checked = false;
+
+        document.getElementById("criteria2").disabled = true;
+        document.getElementById("criteria2").checked = false;
+
+        document.getElementById("criteria3").disabled = true;
+        document.getElementById("criteria3").checked = false;
+
+        document.getElementById("criteria4").disabled = true;
+        document.getElementById("criteria4").checked = false;
+
+        document.getElementById("criteria5").disabled = true;
+        document.getElementById("criteria5").checked = false;
+
+        document.getElementById("criteria6").disabled = true;
+        document.getElementById("criteria6").checked = false;
+
+        document.getElementById("criteria7").disabled = true;
+        document.getElementById("criteria7").checked = false;
+      } else {
+        // on untick event, make them all enabled
+        document.getElementById("criteria1").disabled = false;
+        document.getElementById("criteria2").disabled = false;
+        document.getElementById("criteria3").disabled = false;
+        document.getElementById("criteria4").disabled = false;
+        document.getElementById("criteria5").disabled = false;
+        document.getElementById("criteria6").disabled = false;
+        document.getElementById("criteria7").disabled = false;
+      }
+    });
 
     $('#testForm').submit(function (e) {
       e.preventDefault();
-      fbq('track', 'Lead'); // track facebook lead event
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function () {
-        $("#thank-message").show();
-        $("#personal-details").hide();
-        $("#congratulations-message").hide();
+      // Check for valid input
+      var detailsElements = document.getElementsByClassName("details-input");
+      for (var i = 0; i < detailsElements.length; i++) {
+          if(detailsElements[i].value === "") {
+            document.getElementById(detailsElements[i].id).classList.remove("is-valid");
+            document.getElementById(detailsElements[i].id).className += " is-invalid";
+          } else {
+            document.getElementById(detailsElements[i].id).classList.remove("is-invalid");
+            document.getElementById(detailsElements[i].id).className += " is-valid";
+          }
+      }
+      // if any detailsElements is empty string THEN do nothing ELSE submit form
+      if(document.getElementById("first-name").value === "" ||  document.getElementById("last-name").value === "" || document.getElementById("email").value === "" || document.getElementById("phone").value === "") {
+        // do nothing
+      } else {
+          fbq('track', 'Lead'); // track facebook lead event
+          var $form = $(this);
+          $.post($form.attr("action"), $form.serialize()).then(function () {
+          $("#thank-message").show();
+          $("#personal-details").hide();
+          $("#congratulations-message").hide();
       });
-
+      }
     });
   </script>
 
